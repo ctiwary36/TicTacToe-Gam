@@ -4,10 +4,12 @@ import java.util.Scanner;
 public class TicTacToeGame {
     private static char[] element;
 
+
     public static void main(String[] args) {
         System.out.println("Welcome to Tic Tac Toe Game");
         board();
         userinput();
+        printBoard();
     }
 
    	/*Create a board of char[] of size 10
@@ -17,7 +19,7 @@ public class TicTacToeGame {
     private static void board() {
         element = new char[10];
         for(int i=1; i<10; i++) {
-            element[i]='.';
+            element[i]=' ';
         }
     }
     private static void userinput() {
@@ -35,5 +37,25 @@ public class TicTacToeGame {
         else
             computermark='X';
         System.out.println("User mark is :" +usermark);
+    }
+    public static void printBoard() {
+
+
+        {
+            System.out.println("|---|---|---|");
+            System.out.println("| " + element[0] + " | "
+                    + element[1] + " | " + element[2]
+                    + " |");
+            System.out.println("|-----------|");
+            System.out.println("| " + element[3] + " | "
+                    + element[4] + " | " + element[5]
+                    + " |");
+            System.out.println("|-----------|");
+            System.out.println("| " + element[6] + " | "
+                    + element[7] + " | " + element[8]
+                    + " |");
+            System.out.println("|---|---|---|");
+        }
+
     }
 }
